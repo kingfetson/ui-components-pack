@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Navbar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">MyLogo</div>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+
+        <li class="dropdown">
+          <a href="#">Services ▼</a>
+          <ul class="submenu">
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">UI/UX Design</a></li>
+            <li><a href="#">SEO</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">About ▼</a>
+          <ul class="submenu">
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Our Story</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
