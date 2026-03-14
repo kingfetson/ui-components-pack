@@ -1,0 +1,145 @@
+/* Mega Menu Navbar CSS */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9fafb;
+}
+
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #111827;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #111827;
+}
+
+/* Mega Menu */
+.mega-dropdown:hover .mega-menu {
+  display: flex;
+}
+
+.mega-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 600px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 20px;
+  gap: 20px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.mega-menu .column {
+  flex: 1;
+}
+
+.mega-menu h4 {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  color: #111827;
+}
+
+.mega-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mega-menu ul li {
+  margin-bottom: 8px;
+}
+
+.mega-menu ul li a {
+  text-decoration: none;
+  color: #374151;
+  transition: color 0.3s;
+}
+
+.mega-menu ul li a:hover {
+  color: #111827;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #374151;
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 10px 0;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .mega-dropdown .mega-menu {
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
