@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mega Menu Navbar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">MyLogo</div>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+
+        <li class="mega-dropdown">
+          <a href="#">Products ▼</a>
+          <div class="mega-menu">
+            <div class="column">
+              <h4>Web Design</h4>
+              <ul>
+                <li><a href="#">Landing Pages</a></li>
+                <li><a href="#">Portfolio Sites</a></li>
+                <li><a href="#">Blogs</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h4>Development</h4>
+              <ul>
+                <li><a href="#">HTML Templates</a></li>
+                <li><a href="#">JS Components</a></li>
+                <li><a href="#">Full Websites</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h4>Marketing</h4>
+              <ul>
+                <li><a href="#">SEO Tools</a></li>
+                <li><a href="#">Email Templates</a></li>
+                <li><a href="#">Analytics</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
