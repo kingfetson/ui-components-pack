@@ -1,112 +1,440 @@
-body{
-    margin:0;
-    font-family:'Segoe UI',sans-serif;
-    background: linear-gradient(90deg,#4f46e5,#9333ea);
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #085242 0%, #764ba2 100%);
     color: white;
-    }
-    
-    .navbar{
-    background:#ffffff;
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
-    position:sticky;
-    top:0;
-    z-index:1000;
-    }
-    
-    .container{
-    max-width:1200px;
-    margin:auto;
-    padding:0 20px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    height: 61px;
-    }
-    
-    .logo{
-    font-size:1.5rem;
-    font-weight:bold;
-    color:#111827;
-    }
-    
-    .menu{
-    list-style:none;
-    display:flex;
-    gap:20px;
-    }
-    
-    .menu a{
-    text-decoration:none;
-    color:#374151;
-    font-weight:500;
-    position:relative;
-    }
-    
-    .menu a:hover{
-    transform:translateY(-2px);    
-    color:#111827;
-    }
+    min-height: 100vh;
+}
 
-    .menu a:hover::after{
-        width:100%;
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #111827;
+    position: relative;
+}
+
+/* Enhanced logo with subtle underline */
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 30%;
+    height: 2px;
+    background: linear-gradient(90deg, #2563eb, #4f46e5);
+    transition: width 0.3s ease;
+}
+
+.logo:hover::after {
+    width: 100%;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 500;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+/* Base underline style (already in your CSS) */
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #2563eb;
+    transition: width 0.3s ease;
+}
+
+/* Hover effect */
+.menu a:hover {
+    transform: translateY(-2px);
+    color: #111827;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* Different underline styles you can choose from */
+
+/* Style 1: Center expanding underline */
+.menu.style-1 a::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+}
+
+.menu.style-1 a:hover::after {
+    width: 100%;
+}
+
+/* Style 2: Double underline */
+.menu.style-2 a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -5px;
+    width: 0;
+    height: 2px;
+    background: #9333ea;
+    transition: width 0.3s ease 0.1s;
+}
+
+.menu.style-2 a::after {
+    background: #2563eb;
+}
+
+.menu.style-2 a:hover::before {
+    width: 100%;
+}
+
+/* Style 3: Gradient underline */
+.menu.style-3 a::after {
+    background: linear-gradient(90deg, #2563eb, #9333ea);
+    height: 3px;
+    border-radius: 3px;
+}
+
+/* Style 4: Thick underline */
+.menu.style-4 a::after {
+    height: 4px;
+    bottom: -8px;
+    border-radius: 4px;
+    background: #2563eb;
+    opacity: 0.7;
+}
+
+/* Style 5: Dashed underline (only visible on hover) */
+.menu.style-5 a::after {
+    background: repeating-linear-gradient(90deg, #2563eb, #2563eb 5px, transparent 5px, transparent 10px);
+    height: 2px;
+}
+
+/* Style 6: Animated bouncing underline */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+}
+
+.menu.style-6 a:hover::after {
+    animation: bounce 0.5s ease;
+    width: 100%;
+}
+
+/* Active link state - permanent underline */
+.menu a.active {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.menu a.active::after {
+    width: 100%;
+    background: linear-gradient(90deg, #2563eb, #9333ea);
+}
+
+/* CTA Button */
+.cta-btn {
+    padding: 8px 18px;
+    border: none;
+    background: #111827;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.cta-btn:hover {
+    background: #1f2937;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cta-btn:hover::before {
+    left: 100%;
+}
+
+.cta-btn:active {
+    transform: translateY(0);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.hamburger:hover {
+    background: rgba(55, 65, 81, 0.05);
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #374151;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Style Switcher - to demonstrate different underline styles */
+.style-switcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+}
+
+.style-switcher h4 {
+    margin: 0 0 10px;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.style-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.style-btn {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #e5e7eb;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.style-btn:hover {
+    transform: scale(1.1);
+    border-color: #2563eb;
+}
+
+.style-btn.active {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.style-btn[data-style="1"] { background: #2563eb; }
+.style-btn[data-style="2"] { background: linear-gradient(90deg, #2563eb, #9333ea); }
+.style-btn[data-style="3"] { background: #9333ea; }
+.style-btn[data-style="4"] { background: #111827; }
+.style-btn[data-style="5"] { background: repeating-linear-gradient(45deg, #2563eb, #2563eb 5px, #fff 5px, #fff 10px); }
+.style-btn[data-style="6"] { background: #4f46e5; }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 5px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        animation: slideDown 0.3s ease;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
         }
-        
-    .menu a::after{
-        content:"";
-        position:absolute;
-        left:0;
-        bottom:-5px;
-        width:0;
-        height:2px;
-        background:#2563eb;
-        transition:0.3s;
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
-    
-    .cta-btn{
-    padding:8px 14px;
-    border:none;
-    background:#111827;
-    color:#fff;
-    border-radius:5px;
-    cursor:pointer;
     }
     
-    .hamburger{
-    display:none;
-    flex-direction:column;
-    gap:5px;
-    cursor:pointer;
+    .menu.show {
+        display: flex;
     }
     
-    .hamburger span{
-    height:3px;
-    width:25px;
-    background:#374151;
+    .menu li {
+        width: 100%;
+        text-align: center;
     }
     
-    @media(max-width:768px){
-    
-    .menu{
-    display:none;
-    position:absolute;
-    top:60px;
-    left:0;
-    width:100%;
-    background:#fff;
-    flex-direction:column;
-    padding:10px 0;
+    .menu a {
+        display: block;
+        padding: 12px 20px;
+        font-size: 1rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
     
-    .menu.show{
-    display:flex;
+    .menu li:last-child a {
+        border-bottom: none;
     }
     
-    .cta-btn{
-    display:none;
+    .menu a:hover {
+        transform: none;
+        background: rgba(37, 99, 235, 0.05);
     }
     
-    .hamburger{
-    display:flex;
+    /* Disable underline effects on mobile */
+    .menu a::after {
+        display: none;
     }
     
+    .menu a.active {
+        background: rgba(37, 99, 235, 0.1);
     }
+    
+    .cta-btn {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    /* Hamburger animation */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    /* Hide style switcher on mobile */
+    .style-switcher {
+        display: none;
+    }
+}
+
+/* Content section for demo */
+.content {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Underline examples section */
+.underline-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.example-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px 20px;
+    transition: transform 0.3s ease;
+}
+
+.example-card:hover {
+    transform: translateY(-5px);
+}
+
+.example-card h3 {
+    margin: 0 0 15px;
+    font-size: 1.2rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.example-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffd700;
+}
+
+.example-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}

@@ -5,41 +5,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mega Menu Navbar</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
   <nav class="navbar">
     <div class="container">
-      <div class="logo">MyLogo</div>
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        MegaStore
+      </div>
+      
       <ul class="menu">
-        <li><a href="#">Home</a></li>
+        <li><a href="#" class="active">Home</a></li>
 
         <li class="mega-dropdown">
-          <a href="#">Products ▼</a>
+          <a href="#" class="dropdown-toggle">
+            Products <i class="fas fa-chevron-down arrow"></i>
+          </a>
+          
           <div class="mega-menu">
-            <div class="column">
-              <h4>Web Design</h4>
-              <ul>
-                <li><a href="#">Landing Pages</a></li>
-                <li><a href="#">Portfolio Sites</a></li>
-                <li><a href="#">Blogs</a></li>
-              </ul>
+            <div class="mega-menu-content">
+              <!-- Column 1: Categories -->
+              <div class="mega-column">
+                <h4 class="column-title">
+                  <i class="fas fa-laptop"></i> Electronics
+                </h4>
+                <ul class="mega-links">
+                  <li><a href="#"><i class="fas fa-mobile-alt"></i> Smartphones</a></li>
+                  <li><a href="#"><i class="fas fa-laptop"></i> Laptops</a></li>
+                  <li><a href="#"><i class="fas fa-tablet-alt"></i> Tablets</a></li>
+                  <li><a href="#"><i class="fas fa-headphones"></i> Audio</a></li>
+                  <li><a href="#"><i class="fas fa-camera"></i> Cameras</a></li>
+                </ul>
+              </div>
+              
+              <!-- Column 2: Categories -->
+              <div class="mega-column">
+                <h4 class="column-title">
+                  <i class="fas fa-tshirt"></i> Fashion
+                </h4>
+                <ul class="mega-links">
+                  <li><a href="#"><i class="fas fa-tshirt"></i> Men's Wear</a></li>
+                  <li><a href="#"><i class="fas fa-female"></i> Women's Wear</a></li>
+                  <li><a href="#"><i class="fas fa-child"></i> Kids' Wear</a></li>
+                  <li><a href="#"><i class="fas fa-shoe-prints"></i> Footwear</a></li>
+                  <li><a href="#"><i class="fas fa-clock"></i> Accessories</a></li>
+                </ul>
+              </div>
+              
+              <!-- Column 3: Categories -->
+              <div class="mega-column">
+                <h4 class="column-title">
+                  <i class="fas fa-home"></i> Home & Living
+                </h4>
+                <ul class="mega-links">
+                  <li><a href="#"><i class="fas fa-couch"></i> Furniture</a></li>
+                  <li><a href="#"><i class="fas fa-blender"></i> Appliances</a></li>
+                  <li><a href="#"><i class="fas fa-bed"></i> Bedding</a></li>
+                  <li><a href="#"><i class="fas fa-lightbulb"></i> Lighting</a></li>
+                  <li><a href="#"><i class="fas fa-utensils"></i> Kitchen</a></li>
+                </ul>
+              </div>
+              
+              <!-- Column 4: Featured with image -->
+              <div class="mega-column featured">
+                <h4 class="column-title">🔥 Hot Deals</h4>
+                <div class="featured-content">
+                  <img src="https://via.placeholder.com/200x150" alt="Special Offer">
+                  <p>Summer Sale - Up to 50% Off</p>
+                  <a href="#" class="shop-now-btn">Shop Now →</a>
+                </div>
+              </div>
             </div>
-            <div class="column">
-              <h4>Development</h4>
-              <ul>
-                <li><a href="#">HTML Templates</a></li>
-                <li><a href="#">JS Components</a></li>
-                <li><a href="#">Full Websites</a></li>
-              </ul>
+            
+            <!-- Mega Menu Footer -->
+            <div class="mega-footer">
+              <div class="mega-footer-links">
+                <a href="#"><i class="fas fa-tag"></i> New Arrivals</a>
+                <a href="#"><i class="fas fa-fire"></i> Best Sellers</a>
+                <a href="#"><i class="fas fa-gift"></i> Special Offers</a>
+                <a href="#"><i class="fas fa-truck"></i> Free Shipping</a>
+              </div>
             </div>
-            <div class="column">
-              <h4>Marketing</h4>
-              <ul>
-                <li><a href="#">SEO Tools</a></li>
-                <li><a href="#">Email Templates</a></li>
-                <li><a href="#">Analytics</a></li>
-              </ul>
+          </div>
+        </li>
+
+        <li class="mega-dropdown">
+          <a href="#" class="dropdown-toggle">
+            Services <i class="fas fa-chevron-down arrow"></i>
+          </a>
+          
+          <div class="mega-menu">
+            <div class="mega-menu-content">
+              <div class="mega-column">
+                <h4 class="column-title">
+                  <i class="fas fa-code"></i> Development
+                </h4>
+                <ul class="mega-links">
+                  <li><a href="#">Web Development</a></li>
+                  <li><a href="#">Mobile Apps</a></li>
+                  <li><a href="#">UI/UX Design</a></li>
+                  <li><a href="#">Cloud Solutions</a></li>
+                </ul>
+              </div>
+              
+              <div class="mega-column">
+                <h4 class="column-title">
+                  <i class="fas fa-chart-line"></i> Marketing
+                </h4>
+                <ul class="mega-links">
+                  <li><a href="#">SEO Optimization</a></li>
+                  <li><a href="#">Social Media</a></li>
+                  <li><a href="#">Content Writing</a></li>
+                  <li><a href="#">Email Marketing</a></li>
+                </ul>
+              </div>
+              
+              <div class="mega-column">
+                <h4 class="column-title">
+                  <i class="fas fa-headset"></i> Support
+                </h4>
+                <ul class="mega-links">
+                  <li><a href="#">24/7 Support</a></li>
+                  <li><a href="#">Documentation</a></li>
+                  <li><a href="#">Video Tutorials</a></li>
+                  <li><a href="#">Community Forum</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </li>
@@ -48,13 +141,29 @@
         <li><a href="#">Contact</a></li>
       </ul>
 
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="nav-actions">
+        <button class="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+        <button class="cart-btn">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-badge">3</span>
+        </button>
+        <button class="cta-btn">Sign In</button>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
   </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Mega Menu Navigation</h1>
+    <p>Explore our comprehensive product categories with this beautiful mega menu</p>
+  </section>
 
   <script src="script.js"></script>
 </body>

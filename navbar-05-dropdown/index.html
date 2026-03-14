@@ -7,40 +7,85 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <nav class="navbar">
     <div class="container">
       <div class="logo">MyLogo</div>
+      
       <ul class="menu">
-        <li><a href="#">Home</a></li>
+        <li><a href="#" class="active">Home</a></li>
 
         <li class="dropdown">
-          <a href="#">Services ▼</a>
+          <a href="#" class="dropdown-toggle">
+            Services <span class="arrow">▼</span>
+          </a>
           <ul class="submenu">
             <li><a href="#">Web Development</a></li>
-            <li><a href="#">UI/UX Design</a></li>
-            <li><a href="#">SEO</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">
+                Design <span class="arrow">▶</span>
+              </a>
+              <ul class="submenu nested">
+                <li><a href="#">UI/UX Design</a></li>
+                <li><a href="#">Graphic Design</a></li>
+                <li><a href="#">Logo Design</a></li>
+              </ul>
+            </li>
+            <li><a href="#">SEO Optimization</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">
+                Marketing <span class="arrow">▶</span>
+              </a>
+              <ul class="submenu nested">
+                <li><a href="#">Social Media</a></li>
+                <li><a href="#">Email Marketing</a></li>
+                <li><a href="#">Content Writing</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
 
         <li class="dropdown">
-          <a href="#">About ▼</a>
+          <a href="#" class="dropdown-toggle">
+            About <span class="arrow">▼</span>
+          </a>
           <ul class="submenu">
             <li><a href="#">Our Team</a></li>
             <li><a href="#">Our Story</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
           </ul>
         </li>
 
         <li><a href="#">Contact</a></li>
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">
+            Resources <span class="arrow">▼</span>
+          </a>
+          <ul class="submenu">
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </li>
       </ul>
 
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="nav-actions">
+        <button class="cta-btn">Get Started</button>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
   </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Dropdown Navigation</h1>
+    <p>Hover or click to explore multi-level dropdown menus</p>
+  </section>
 
   <script src="script.js"></script>
 </body>

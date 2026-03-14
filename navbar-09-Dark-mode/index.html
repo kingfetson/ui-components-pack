@@ -1,38 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Base Navbar</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Navbar</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body class="light-mode">
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">MyLogo</div>
 
-<body>
+            <ul class="menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
 
-<nav class="navbar">
-<div class="container">
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-switch" class="theme-switch">
+                <label for="theme-switch" class="toggle-label">
+                    <span class="toggle-icon">🌙</span>
+                    <span class="toggle-icon">☀️</span>
+                    <span class="toggle-ball"></span>
+                </label>
+            </div>
 
-<div class="logo">MyLogo</div>
+            <button class="cta-btn">Get Started</button>
 
-<ul class="menu">
-<li><a href="#">Home</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-<button class="cta-btn">Get Started</button>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Dark Mode Ready</h1>
+            <p>Toggle the switch to change between light and dark themes</p>
+            <button class="hero-cta">Learn More</button>
+        </div>
+    </section>
 
-<div class="hamburger" id="hamburger">
-<span></span>
-<span></span>
-<span></span>
-</div>
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🌙</div>
+                <h3>Dark Theme</h3>
+                <p>Easy on the eyes during night time browsing</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">☀️</div>
+                <h3>Light Theme</h3>
+                <p>Perfect for daytime with high contrast</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>Auto Switch</h3>
+                <p>Automatically switches based on time</p>
+            </div>
+        </div>
+    </section>
 
-</div>
-</nav>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>

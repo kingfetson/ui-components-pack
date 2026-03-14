@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Base Navbar</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Navbar</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">MyLogo</div>
 
-<nav class="navbar">
-<div class="container">
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
 
-<div class="logo">MyLogo</div>
+            <button class="cta-btn">Get Started</button>
 
-<ul class="menu">
-<li><a href="#">Home</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-<button class="cta-btn">Get Started</button>
+    <!-- Hero Section to show content -->
+    <div class="hero-section">
+        <h1>Animated Navigation Bar</h1>
+        <p>All navigation links are visible and fully functional with smooth animations</p>
+    </div>
 
-<div class="hamburger" id="hamburger">
-<span></span>
-<span></span>
-<span></span>
-</div>
-
-</div>
-</nav>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>

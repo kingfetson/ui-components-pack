@@ -3,33 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sticky Navbar</title>
+  <title>Sticky Navbar with Effects</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="container">
       <div class="logo">MyLogo</div>
+      
       <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+      
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle">🌙</button>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
   </nav>
 
-  <div class="content">
-    <h1>Scroll down to see the sticky navbar effect</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scroll down...</p>
-    <div style="height:2000px;"></div>
-  </div>
+  <!-- Sections for scrolling -->
+  <section id="home" class="section hero-section">
+    <h1>Sticky Navbar Effect</h1>
+    <p>Watch how the navbar transforms as you scroll</p>
+    <div class="scroll-indicator">↓ Scroll Down ↓</div>
+  </section>
+
+  <section id="about" class="section about-section">
+    <h2>About Us</h2>
+    <p>The navbar sticks to the top and changes style based on scroll position.</p>
+    <div class="feature-grid">
+      <div class="feature-item">✨ Sticky Position</div>
+      <div class="feature-item">🎨 Color Change</div>
+      <div class="feature-item">📏 Shrinks on Scroll</div>
+      <div class="feature-item">🔄 Hide on Scroll Down</div>
+    </div>
+  </section>
+
+  <section id="services" class="section services-section">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Web Design</h3>
+        <p>Beautiful responsive websites</p>
+      </div>
+      <div class="card">
+        <h3>Development</h3>
+        <p>Custom web applications</p>
+      </div>
+      <div class="card">
+        <h3>SEO</h3>
+        <p>Search engine optimization</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-section">
+    <h2>Contact Us</h2>
+    <p>Get in touch with our team</p>
+  </section>
 
   <script src="script.js"></script>
 </body>

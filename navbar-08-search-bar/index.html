@@ -1,40 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Navbar with Search</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">MyLogo</div>
 
-<nav class="navbar">
-<div class="container">
+            <ul class="menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
 
-<div class="logo">MyLogo</div>
+            <div class="search-wrapper">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="search-input" placeholder="Search products, blogs..." id="searchInput">
+                    <button class="search-btn" id="searchBtn">Search</button>
+                </div>
+                
+                <!-- Search Suggestions Dropdown -->
+                <div class="search-suggestions" id="searchSuggestions">
+                    <div class="suggestion-header">Recent Searches</div>
+                    <div class="suggestion-item">
+                        <span class="suggestion-icon">🕒</span>
+                        <span class="suggestion-text">laptop</span>
+                    </div>
+                    <div class="suggestion-item">
+                        <span class="suggestion-icon">🕒</span>
+                        <span class="suggestion-text">smartphone</span>
+                    </div>
+                    <div class="suggestion-divider"></div>
+                    <div class="suggestion-header">Popular Products</div>
+                    <div class="suggestion-item">
+                        <span class="suggestion-icon">🔥</span>
+                        <span class="suggestion-text">wireless headphones</span>
+                    </div>
+                    <div class="suggestion-item">
+                        <span class="suggestion-icon">🔥</span>
+                        <span class="suggestion-text">gaming mouse</span>
+                    </div>
+                    <div class="suggestion-item">
+                        <span class="suggestion-icon">🔥</span>
+                        <span class="suggestion-text">mechanical keyboard</span>
+                    </div>
+                </div>
+            </div>
 
-<ul class="menu">
-<li><a href="#">Home</a></li>
-<li><a href="#">Products</a></li>
-<li><a href="#">Blog</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-<div class="search-box">
-<input type="text" placeholder="Search...">
-<button>Search</button>
-</div>
+    <!-- Mobile Search (visible only on mobile) -->
+    <div class="mobile-search" id="mobileSearch">
+        <div class="mobile-search-container">
+            <input type="text" class="mobile-search-input" placeholder="Search...">
+            <button class="mobile-search-btn">Search</button>
+            <button class="mobile-search-close" id="mobileSearchClose">✕</button>
+        </div>
+    </div>
 
-<div class="hamburger" id="hamburger">
-<span></span>
-<span></span>
-<span></span>
-</div>
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="hero">
+            <h1>Find What You're Looking For</h1>
+            <p>Search through our extensive collection of products and articles</p>
+        </section>
 
-</div>
-</nav>
+        <section class="popular-searches">
+            <h2>Popular Searches</h2>
+            <div class="search-tags">
+                <span class="search-tag">laptop</span>
+                <span class="search-tag">smartphone</span>
+                <span class="search-tag">headphones</span>
+                <span class="search-tag">keyboard</span>
+                <span class="search-tag">mouse</span>
+                <span class="search-tag">monitor</span>
+            </div>
+        </section>
 
-<script src="script.js"></script>
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x150" alt="Product">
+                    <h3>Wireless Headphones</h3>
+                    <p>$99.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x150" alt="Product">
+                    <h3>Gaming Mouse</h3>
+                    <p>$49.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x150" alt="Product">
+                    <h3>Mechanical Keyboard</h3>
+                    <p>$129.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x150" alt="Product">
+                    <h3>4K Monitor</h3>
+                    <p>$299.99</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
+    <script src="script.js"></script>
 </body>
 </html>

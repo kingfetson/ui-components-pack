@@ -108,3 +108,40 @@ body{
         .dropdown-sub:hover .submenu2{
         display:block;
         }
+
+        .menu li{
+position:relative;
+}
+
+/* First dropdown */
+
+.submenu{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+background:white;
+list-style:none;
+padding:10px;
+min-width:150px;
+}
+
+.dropdown:hover .submenu{
+display:block;
+}
+
+/* Second dropdown */
+
+.submenu2{
+display:none;
+position:absolute;
+left:150px;
+top:0;
+background:white;
+list-style:none;
+padding:10px;
+}
+
+.dropdown-sub:hover .submenu2{
+display:block;
+}

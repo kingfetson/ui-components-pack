@@ -1,38 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Base Navbar</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Optional: Add Font Awesome for more icon options -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                MyLogo
+            </div>
 
-<nav class="navbar">
-<div class="container">
+            <ul class="menu">
+                <li><a href="#"><span class="icon">🏠</span> Home</a></li>
+                <li><a href="#"><span class="icon">📁</span> Projects</a></li>
+                <li><a href="#"><span class="icon">💼</span> Services</a></li>
+                <li><a href="#"><span class="icon">📞</span> Contact</a></li>
+            </ul>
 
-<div class="logo">MyLogo</div>
+            <button class="cta-btn">
+                <span>Get Started</span>
+                <span class="btn-icon">→</span>
+            </button>
 
-<ul class="menu">
-    <li><a href="#">🏠 Home</a></li>
-    <li><a href="#">📁 Projects</a></li>
-    <li><a href="#">💼 Services</a></li>
-    <li><a href="#">📞 Contact</a></li>
-    </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-<button class="cta-btn">Get Started</button>
-
-<div class="hamburger" id="hamburger">
-<span></span>
-<span></span>
-<span></span>
+    <div class="icon-showcase">
+    <h2>Icon Navigation</h2>
+    <p>Beautiful emoji and icon-based navigation with smooth animations</p>
+    
+    <div class="icon-grid">
+        <div class="icon-card">
+            <span class="icon-large">🏠</span>
+            <span>Home</span>
+        </div>
+        <div class="icon-card">
+            <span class="icon-large">📁</span>
+            <span>Projects</span>
+        </div>
+        <div class="icon-card">
+            <span class="icon-large">💼</span>
+            <span>Services</span>
+        </div>
+        <div class="icon-card">
+            <span class="icon-large">📞</span>
+            <span>Contact</span>
+        </div>
+        <div class="icon-card">
+            <span class="icon-large">⚡</span>
+            <span>Features</span>
+        </div>
+        <div class="icon-card">
+            <span class="icon-large">🎨</span>
+            <span>Design</span>
+        </div>
+        <div class="icon-card">
+            <span class="icon-large">📊</span>
+            <span>Analytics</span>
+        </div>
+        <div class="icon-card">
+            <span class="icon-large">🔒</span>
+            <span>Security</span>
+        </div>
+    </div>
 </div>
 
-</div>
-</nav>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
